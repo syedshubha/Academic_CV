@@ -1,0 +1,328 @@
+%-------------------------
+% Resume in Latex
+% Author : Syed Emad Uddin Shubha
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+
+\begin{center}
+    \textbf{\Huge \scshape Syed Emad Uddin Shubha} \\ \vspace{1pt}
+    \small (+880) 1799-470844  $|$ \href{mailto:shubha.buet@gmail.com}{\underline{shubha.buet@gmail.com}} $|$
+    \href{https://syedshubha.github.io}{\underline{syedshubha.github.io}}
+\end{center}
+
+
+
+%-----------Summary-----------
+\section{\textbf{PROFILE}}
+\justifying{ As an aspiring researcher in the field of Quantum Information, I have cultivated a robust theoretical foundation, demonstrated proficiency in programming, and exhibited the capability to perform intricate analytical calculations. My unwavering passion for research serves as the driving force behind my continuous pursuit of knowledge and growth within this field.}
+
+
+\section*{\textbf{RESEARCH INTEREST}}
+\begin{minipage}[t]{0.33\textwidth}
+  \begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.075em} % Adjust the spacing between items
+    \setlength\parskip{-0.075em} % Adjust the spacing between paragraphs within items
+    \item Quantum Communication
+    \item Quantum Cryptography
+  \end{itemize}
+\end{minipage}%
+\begin{minipage}[t]{0.33\textwidth}
+  \begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.075em} % Adjust the spacing between items
+    \setlength\parskip{-0.075em} % Adjust the spacing between paragraphs within items
+    \item Quantum Error Correction
+    \item Optics and Photonics
+  \end{itemize}
+\end{minipage}%
+\begin{minipage}[t]{0.33\textwidth}
+  \begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.075em} % Adjust the spacing between items
+    \setlength\parskip{-0.075em}
+    \item Quantum Algorithm
+    \item Deep Learning
+  \end{itemize}
+\end{minipage}
+
+
+%-----------EDUCATION-----------
+\section{\textbf{EDUCATION }}
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{Bangladesh University of Engineering and Technology} & February 2017 – May 2022 \\
+  B.Sc. in Electrical and Electronic Engineering  & CGPA: 3.24/4.00 \\
+\end{tabular*}
+\justifying{\textbf{Relevant Courses}: Signals and Systems, Engineering Electromagnetics, Electrical Properties of Materials, Solid State Devices, Random Signals and Processes, Control Systems I, Wireless Communication. }
+
+
+
+
+%-----------Research-----------
+
+\section*{\textbf{RESEARCH EXPERIENCE}}
+\subsection*{Research Assistant | North South University, Dhaka \hfill June 2022 - Present}
+
+\begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.025em} % Adjust the spacing between items
+    \setlength\parskip{-0.025em} % Adjust the spacing between paragraphs within items
+    \fontsize{9.6}{11.2}\selectfont
+    \item Engaged in diverse quantum research projects under the supervision of Dr. Mahdy Rahman Chowdhury.
+  \item Working primarily as a researcher and occasionally co-supervising research students.
+  \item Published a high-impact journal article (as $1^{st}$ author) and submitted a paper to an IEEE conference.
+    \item Ongoing Research Projects (Co-supervised with Dr. Mahdy Rahman Chowdhury):
+    \begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.075em} % Adjust the spacing between items
+    \setlength\parskip{-0.075em} % Adjust the spacing between paragraphs within items
+        \item [1.] \textbf{Syed Emad Uddin Shubha}, Mir Muzahedul Islam, Tanvir Ahahmed Sadi, Md. Hasibul Hasan Miraz, M.R.C. Mahdy. "Implementation of a Modified QHED Algorithm for Better Edge Detection." (Manuscript Under Preparation).
+       
+        \item [2.] Raiyan Rahman, Md Shawmoon Azad, Mohammed Rakibul Hasan, \textbf{Syed Emad Uddin Shubha}, M.R.C. Mahdy. "A Secure Image Transmission Scheme Using Chaotic System and Quantum Entanglement." (In Preparation).
+    \end{itemize}
+\end{itemize}
+
+
+\vspace{-1.5em} % Adjust the vertical space before the next subsection
+\subsection*{Undergraduate Research | Bangladesh University of Engineering and Technology (BUET)}
+
+\begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.025em} % Adjust the spacing between items
+    \setlength\parskip{-0.025em} % Adjust the spacing between paragraphs within items
+    \fontsize{9.6}{11.2}\selectfont
+  \item Conducted an undergraduate thesis on quantum communication under the supervision of Dr. Md. Saifur Rahman.
+  \item Conducted research on deep learning in MI - BCI task classification.
+  \item Both of these works were conducted during undergraduate final year and have been published in IEEE conferences.
+\end{itemize}
+
+
+
+\section*{\textbf{PUBLICATIONS}}
+\begin{itemize}[left=0cm]
+\fontsize{9.6}{11.2}\selectfont
+\item \textbf{Journal Publications:}
+\vspace{-0.5em} % Adjust the amount of vertical space here
+\begin{itemize}[left=0cm]
+       \item [1.] \textbf{Syed Emad Uddin Shubha}, Md. Saifur Rahman, M.R.C. Mahdy, "Significant improvement of fidelity for encoded quantum bell pairs at long and short-distance communication along with a generalized circuit." Heliyon (Q1-indexed, IF: 4.00),  \href{https://www.sciencedirect.com/science/article/pii/S2405844023069086}{\underline{\textbf{doi: 10.1016/j.heliyon.2023.e19700}}}.
+    \end{itemize}
+    \end{itemize}
+\begin{itemize}[left=0cm]
+\fontsize{9.6}{11.2}\selectfont
+\item \textbf{CONFERENCE PROCEEDINGS:}
+\vspace{-0.5em} % Adjust the amount of vertical space here
+    \begin{itemize}[left=0cm]
+        \item [2.] \textbf{Syed Emad Uddin Shubha}, and Md. Saifur Rahman. "Effect of Quantum Repetition Code on Fidelity of Bell States in Bit Flip Channels." In 2022 12th International Conference on Electrical and Computer Engineering (ICECE), pp. 368-371. IEEE, 2022.          \href{https://doi.org/10.1109/ICECE57408.2022.10088665}{\underline{\textbf{doi: 10.1109/ICECE57408.2022.10088665}}}. 
+          
+        \item [3.] Md Asif Iqbal, Md Maisoon Rahman, Sami Muhtasim, \textbf{Syed Emad Uddin Shubha}, and Mahmudul Hasan. "Effect of EOG Artifact Removal on EEG Motor-Imagery Classification." In 2022 25th International Conference on Computer and Information Technology (ICCIT), pp. 850-854. IEEE, 2022.          \href{https://doi.org/10.1109/ICCIT57492.2022.10056062}{\underline{\textbf{doi: 10.1109/ICCIT57492.2022.10056062}}}.
+      \item [4.] Saikat Barua, \textbf{Syed Emad Uddin Shubha}, Monika Rahman, Apurba Jalal Uchash, M.R.C. Mahdy. "RESCUED: Robust Quantum Error Correction With Surface Code In Noisy Channels Using Ensemble Decoder." (Submitted to IEEE ICTP 2023).
+    \end{itemize}
+    \end{itemize}
+
+
+
+\section{\textbf{TEACHING EXPERIENCE}}
+\subsection*{Teaching Assistant | BRAC University, Dhaka \hfill June 2023 - Present}
+\vspace{-0.5em} % Adjust the amount of vertical space here
+\begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.075em} % Adjust the spacing between items
+    \setlength\parskip{-0.075em} % Adjust the spacing between paragraphs within items
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\leftmargin}{0pt}
+    \item Conducting MAT120 lab sessions, teaching students how to solve calculus problems using Python.
+    \item Creating assignments, administering tests for student assessment, and grading them.
+\end{itemize}
+
+
+
+    
+\section*{\textbf{NOTABLE PROJECTS}}
+\begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.075em} % Adjust the spacing between items
+    \setlength\parskip{-0.075em} % Adjust the spacing between paragraphs within items
+    \item Quantum Image Encoding and Decoding using Qiskit - \href{https://github.com/syedshubha/QuantumImageProcessing/blob/main/qiskit_assignment_shubha.ipynb}{\underline{\textbf{GitHub Link}}}
+    \begin{itemize}[left=0cm]
+        \item[-] \small \justifying Implemented quantum image encoding and decoding using IBM Qiskit in Python.
+        \item[-] \small  \justifying Generalized the encoding circuit for both FRQI and NEQR methods and developed the decoding method.
+    \end{itemize}
+    
+    \item Load Flow Analysis for n Bus using Gauss-Siedel Algorithm - \href{https://github.com/syedshubha/load_flow_analysis_gauss_seidel}{\underline{\textbf{GitHub Link}}}
+    \begin{itemize}[left=0cm]
+        \item[-] \small  \justifying Developed a load flow analysis program for n-bus power systems  during the junior year of undergraduate studies.
+        \item[-] \small \justifying{Wrote MATLAB code for the generalized Gauss-Siedel Algorithm and used MS Excel for I/O file management.} 
+    \end{itemize}
+
+    \item Bengali Speech Emotion Detection using Machine Learning. 
+    \begin{itemize}[left=0cm]
+        \item[-] \small  \justifying Conducted research on Bengali Speech Emotion Detection during the junior year of undergraduate studies.
+        \item[-] \small  \justifying Created a classification model for four emotions in Bengali speech: Sad, Happy, Angry, and Neutral.
+        \item[-] \small  \justifying Developed a training dataset and used MATLAB for the implementation.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+
+
+
+%%-----------SCORES----------------------------------------
+\section*{\textbf{TEST SCORES}}
+\justifying{\textbf{IELTS}: Overall: 7.5/9.0 (Reading: 8.5, Listening: 7.5, Writing: 6.5, Speaking: 6.5).} 
+
+
+%-----------SKILLS----------------------------------------
+\section*{\textbf{SKILLS SUMMARY}}
+\begin{tabular}{@{}p{0.25\textwidth} p{0.7\textwidth}}
+    \textbf{Programming Language} & : Python, MATLAB, C, C++, Assembly language.\\
+    \textbf{Simulation Software} & : PSpice, Proteus, Quartus, Simulink. \\
+    \textbf{Office Application} & : Microsoft Office Suite, LaTeX.\\
+     \textbf{Soft Skills} & : Organizing, Collaborating, Teaching, Writing. \\
+\end{tabular}
+
+%--------------CERTIFICATIONS-----------------------------
+\section*{\textbf{SELECTED CERTIFICATIONS}}
+\begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.075em} % Adjust the spacing between items
+    \setlength\parskip{-0.075em} % Adjust the spacing between paragraphs within items
+\raggedright
+    \item Completed ``Qiskit Global Quantum Summer School'' organized by The Coding School. (2021)
+    \item Completed ``Tensor PSI Winter School for Theoretical Physics''. (2023)
+\end{itemize}
+
+
+%-----------ECA-----------------------------
+\section*{\textbf{EXTRA-CURRICULAR ACTIVITIES}}
+\begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.075em} % Adjust the spacing between items
+    \setlength\parskip{-0.075em} % Adjust the spacing between paragraphs within items
+\raggedright
+    \item Assisted in the dissemination of PPE during the Covid-19 emergency.
+    \item Volunteered in the distribution of winter clothes in remote villages.
+\end{itemize}
+
+
+% -----------------------------AWARDS-----------------------------
+\section*{\textbf{HONORS AND AWARDS}}
+\begin{itemize}[left=0cm]
+    \setlength\itemsep{-0.075em} % Adjust the spacing between items
+    \setlength\parskip{-0.075em} % Adjust the spacing between paragraphs within items
+    \item 1st position in Mathematical Olympiad (University Level) of International Day of Mathematics \mbox{organized} by Bangladesh Mathematical Society (2021).
+    \item University Admission Test Scholarship (2017) and Technical Scholarship (up to all semesters).
+    \item General Scholarship, Cumilla Board, S.S.C 2014 and Talentpool Scholarship, Cumilla Board, J.S.C 2011.
+
+        \item Keynote Speaker at the event ``Quantum Computing \& Mechanics: Technical Prospects \& Opportunities in Higher Studies'' organized by IEEE NSU Student Branch (2022).
+\end{itemize}
+
+
+
+%-------------------------------------------
+
+\section*{\textbf{REFERENCES}}
+\begin{tabular}{@{}p{0.45\textwidth} p{0.5\textwidth}}
+    Dr. Mahdy Rahman Chowdhury, & Dr. Md. Saifur Rahman, \\
+    Associate Professor, ECE Department, & Professor, Department of EEE, \\
+    North South University, Dhaka. & Bangladesh University of Engineering and Technology. \\
+    Email: mahdy.chowdhury@northsouth.edu & Email: saifur@eee.buet.ac.bd \\
+\end{tabular}
+
+
+\end{document}
