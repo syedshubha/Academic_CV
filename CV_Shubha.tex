@@ -1,0 +1,373 @@
+%-------------------------------------------------------------
+% Academic Curriculum Vitae
+% Syed Emad Uddin Shubha
+% Compile with pdflatex (run twice for page numbers)
+%-------------------------------------------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[margin=0.75in,top=0.6in,bottom=0.75in,footskip=0.35in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\hypersetup{
+  pdftitle={Curriculum Vitae -- Syed Emad Uddin Shubha},
+  pdfauthor={Syed Emad Uddin Shubha}
+}
+
+\raggedright
+\raggedbottom
+\setlength{\parindent}{0pt}
+\urlstyle{same}
+
+%---------- Header / footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{gray}Syed Emad Uddin Shubha \,--\, Curriculum Vitae}
+\fancyfoot[R]{\footnotesize\color{gray}Page \thepage\ of \pageref{LastPage}}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[R]{\footnotesize\color{gray}Page \thepage\ of \pageref{LastPage}}}
+
+%---------- Section style ----------
+\titleformat{\section}
+  {\large\scshape\bfseries\color{black}}{}{0em}{}[\vspace{-2pt}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titleformat{\subsection}
+  {\normalsize\bfseries\itshape}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{3pt}
+
+%---------- Helpers ----------
+\newcommand{\me}{\textbf{S.\,E.\,U.~Shubha}}
+\newcommand{\cvlink}[2]{\href{#1}{\underline{#2}}}
+
+% Entry with right-aligned date; second line italic with right-aligned detail
+\newcommand{\cventry}[4]{%
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4}
+  \end{tabularx}\par\vspace{1pt}}
+% Single-line entry with right-aligned date
+\newcommand{\cvline}[2]{%
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & #2
+  \end{tabularx}\par\vspace{1pt}}
+
+% Keep each entry (heading + bullets) together on one page
+\newenvironment{cvblock}
+  {\par\noindent\begin{minipage}[t]{\textwidth}\raggedright}
+  {\end{minipage}\par\vspace{5pt}}
+% Never split a paragraph, bullet, or reference across pages
+\interlinepenalty=10000
+\clubpenalty=10000
+\widowpenalty=10000
+
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt, parsep=0pt}
+
+% Numbered publication lists: [J1], [C1], ...
+\newlist{pubs}{enumerate}{1}
+\setlist[pubs]{leftmargin=2.6em, labelsep=0.5em, itemsep=3pt, topsep=3pt, parsep=0pt, align=left}
+
+%=============================================================
+\begin{document}
+
+%---------- Name block ----------
+\begin{center}
+  {\Huge\scshape Syed Emad Uddin Shubha}\\[4pt]
+  Ph.D. Student, Division of Computer Science, Louisiana State University, Baton Rouge, LA, USA\\[3pt]
+  \small
+  \cvlink{mailto:syed.shubha@ieee.org}{syed.shubha@ieee.org} \;$|$\;
+  \cvlink{https://syedshubha.com/}{syedshubha.com} \;$|$\;
+  \cvlink{https://www.linkedin.com/in/syedshubha/}{in/syedshubha} \;$|$\;
+  \cvlink{https://github.com/syedshubha}{github.com/syedshubha} \;$|$\;
+  \cvlink{https://scholar.google.com/citations?user=8EK8VJMAAAAJ}{Scholar} \;$|$\;
+  \cvlink{https://orcid.org/0009-0005-1435-5958}{ORCID}
+  % Uncomment if an application asks for it:
+  % \\[2pt] Citizenship: Bangladesh \;$|$\; US Visa Status: F-1 Student
+\end{center}
+
+%=============================================================
+\section{Research Interests}
+My doctoral research, which I conceived and proposed, spans two complementary directions:
+\begin{itemize}
+  \item \textbf{Quantum hardware security.} Security of multi-tenant superconducting quantum processors: pulse-level characterization of crosstalk as an attack channel, detection that separates malicious interference from benign calibration drift, and cross-layer verification of compiled quantum workloads.
+  \item \textbf{Quantum communication and quantum correlations.} Exploiting quantum correlations to design adaptive error-correction and purification protocols, and high-fidelity multi-qubit state transmission over partially entangled GHZ channels with optimal POVMs, toward quantum repeaters and the quantum internet.
+\end{itemize}
+Related interests include quantum cryptography, quantum error correction, quantum algorithms, and machine learning for quantum characterization.
+
+%=============================================================
+\section{Education}
+
+\begin{cvblock}
+\cventry{Louisiana State University, Baton Rouge, LA, USA}{January 2025 -- Present}
+        {Ph.D. in Computer Science, Division of Computer Science}{GPA: 3.988/4.00}
+\begin{itemize}
+  \item Advisor: Dr.~Tasnuva Farheen, Assistant Professor, Division of Computer Science (\cvlink{mailto:tfarheen@lsu.edu}{tfarheen@lsu.edu})
+  \item Selected coursework: Quantum Technology (A+), Quantum Algorithms (A+), Machine Learning (A+), Advanced Algorithm Design
+\end{itemize}
+\end{cvblock}
+
+\begin{cvblock}
+\cventry{Bangladesh University of Engineering and Technology (BUET), Dhaka}{February 2017 -- May 2022}
+        {B.Sc. in Electrical and Electronic Engineering}{CGPA: 3.24/4.00}
+\begin{itemize}
+  \item Thesis supervisor: Dr.~Md.~Saifur Rahman. Relevant coursework: Control Systems, Solid State Devices, Random Signals \& Processes, Communication Systems
+\end{itemize}
+\end{cvblock}
+
+%=============================================================
+\section{Research Experience}
+
+\begin{cvblock}
+\cventry{Graduate Research Assistant}{January 2025 -- Present}
+        {Division of Computer Science, Louisiana State University}{Baton Rouge, LA}
+\begin{itemize}
+  \item Quantum hardware security direction: characterized crosstalk as an active attack vector on shared superconducting hardware through pulse-level simulation [C4], then developed a pulse-to-circuit characterization framework that identified a novel asymmetric attack mechanism [C5].
+  \item Developed a structural detection framework that separates coherent crosstalk from calibration drift using Pauli-transfer-matrix signatures, built around an exact structural zero that cleanly separates drift from attack signatures [C7].
+  \item Compared simulated operations under isolated and concurrent execution to study interference on shared quantum hardware.
+  \item Designed a correlation-guided adaptive purification protocol for networked superdense coding [C6] and continue this research under the NSF award. Examined how correlations between qubits change as noise degrades a communication link. As corresponding author, led collaborative work on $n$-qubit state teleportation over partially entangled GHZ channels with optimal POVM measurement [J4].
+\end{itemize}
+\end{cvblock}
+
+\begin{cvblock}
+\cventry{Research Assistant}{June 2022 -- May 2024}
+        {Department of Electrical and Computer Engineering, North South University}{Dhaka, Bangladesh}
+\begin{itemize}
+  \item Pioneered Bangladesh's first research initiative in quantum computing and quantum communication, under the supervision of Dr.~Mahdy Rahman Chowdhury.
+  \item Helped build the NSU Center of Quantum Computing (NCQC), Bangladesh's first dedicated quantum research center.
+  \item Extended undergraduate thesis work into a first-author journal article proposing a stabilizer-formalism error-correction protocol that improves Bell-pair fidelity under Pauli noise for short- and long-distance communication [J1].
+  \item Co-supervised student researchers with Dr.~Chowdhury; formulated and directed research projects, resulting in work on ensemble decoders for surface codes [C3] and on integrating quantum key distribution with classical security [J2, J3].
+\end{itemize}
+\end{cvblock}
+
+\begin{cvblock}
+\cventry{Undergraduate Researcher}{2021 -- 2022}
+        {Department of Electrical and Electronic Engineering, BUET}{Dhaka, Bangladesh}
+\begin{itemize}
+  \item Undergraduate thesis on quantum communication under Dr.~Md.~Saifur Rahman: fidelity of Bell states protected by quantum repetition codes in bit-flip channels [C2].
+  \item Studied the effect of EOG artifact removal on deep-learning classification of motor-imagery EEG signals for brain--computer interfaces [C1].
+\end{itemize}
+\end{cvblock}
+
+%=============================================================
+\section{Publications}
+{\small \me\ denotes the author. $^{*}$Corresponding author. $^{\dagger}$Student project co-supervised by the author.}
+
+\subsection{Journal Articles}
+\begin{pubs}[label={[J\arabic*]}]
+  \item[{[J4]}] A.~Banik, M.\,S.~Khan, R.\,M.~Khan, \me$^{*}$, and M.\,R.~Chowdhury, ``Secure and Efficient $n$-Qubit Entangled State Teleportation Using Partially Entangled GHZ Channels and Optimal POVM,'' \textit{AVS Quantum Science}, vol.~7, no.~3, 2025. \cvlink{https://doi.org/10.1116/5.0284072}{doi:10.1116/5.0284072}
+  \item[{[J3]}] A.~Sykot, M.\,S.~Azad, W.\,R.~Tanha, B.\,M.\,M.~Morshed, \me, and M.\,R.\,C.~Mahdy, ``Multi-Layered Security System: Integrating Quantum Key Distribution with Classical Cryptography to Enhance Steganographic Security,'' \textit{Alexandria Engineering Journal}, vol.~121, pp.~167--182, 2025.$^{\dagger}$ \cvlink{https://doi.org/10.1016/j.aej.2025.02.056}{doi:10.1016/j.aej.2025.02.056}
+  \item[{[J2]}] R.~Rahman, M.\,S.~Azad, M.\,R.~Hasan, \me, and M.\,R.\,C.~Mahdy, ``Quantum Secure Image Transmission: A Chaos-Assisted Quantum Key Distribution Approach Using Entanglement,'' \textit{IET Quantum Communication}, vol.~6, no.~1, p.~e70016, 2025.$^{\dagger}$ \cvlink{https://doi.org/10.1049/qtc2.70016}{doi:10.1049/qtc2.70016}
+  \item[{[J1]}] \me, M.\,S.~Rahman, and M.\,R.\,C.~Mahdy, ``Significant Improvement of Fidelity for Encoded Quantum Bell Pairs at Long and Short-Distance Communication along with Generalized Circuit,'' \textit{Heliyon}, vol.~9, no.~9, p.~e19700, 2023. \cvlink{https://doi.org/10.1016/j.heliyon.2023.e19700}{doi:10.1016/j.heliyon.2023.e19700}
+\end{pubs}
+
+\subsection{Peer-Reviewed Conference and Workshop Papers}
+\begin{pubs}[label={[C\arabic*]}]
+  \item[{[C7]}] \me\ and T.~Farheen, ``Distinguishing Coherent Crosstalk from Calibration Drift via Pauli-Transfer Signatures and Quantum Edge Detection,'' \textit{IEEE International Symposium on Hardware Oriented Security and Trust (HOST)}, 2027, accepted, to appear. \cvlink{https://host.conferences.computer.org/2027/accepted-papers/}{HOST accepted papers}
+  \item[{[C6]}] \me\ and T.~Farheen, ``Testbed Protocol for Adaptive Superdense Coding in Distributed Quantum Networks,'' \textit{IEEE International Conference on Quantum Computing and Engineering (QCE)}, 2025, short paper. \cvlink{https://doi.org/10.1109/QCE65121.2025.10350}{doi:10.1109/QCE65121.2025.10350}
+  \item[{[C5]}] \me\ and T.~Farheen, ``Pulse-to-Circuit Characterization of Stealthy Crosstalk Attack on Multi-Tenant Superconducting Quantum Hardware,'' \textit{Proceedings of the 2025 Quantum Security and Privacy Workshop (QSec '25)}, co-located with ACM CCS, pp.~16--27, 2025. \cvlink{https://doi.org/10.1145/3733825.3765282}{doi:10.1145/3733825.3765282}
+  \item[{[C4]}] \me\ and T.~Farheen, ``Pulse-Level Simulation of Crosstalk Attacks on Superconducting Quantum Hardware,'' \textit{IEEE International Conference on Quantum Computing and Engineering (QCE)}, 2025, short paper. \cvlink{https://doi.org/10.1109/QCE65121.2025.10300}{doi:10.1109/QCE65121.2025.10300}
+  \item[{[C3]}] S.~Barua, \me, M.~Rahman, A.\,J.~Uchash, and M.\,R.\,C.~Mahdy, ``RESCUED: Robust Quantum Error Correction with Surface Code in Noisy Channels Using Ensemble Decoder,'' \textit{IEEE International Conference on Telecommunications and Photonics (ICTP)}, pp.~1--5, 2023.
+  \item[{[C2]}] \me\ and M.\,S.~Rahman, ``Effect of Quantum Repetition Code on Fidelity of Bell States in Bit Flip Channels,'' \textit{12th International Conference on Electrical and Computer Engineering (ICECE)}, IEEE, pp.~368--371, 2022. \cvlink{https://doi.org/10.1109/ICECE57408.2022.10088665}{doi:10.1109/ICECE57408.2022.10088665}
+  \item[{[C1]}] M.\,A.~Iqbal, M.\,M.~Rahman, S.~Muhtasim, \me, and M.~Hasan, ``Effect of EOG Artifact Removal on EEG Motor-Imagery Classification,'' \textit{25th International Conference on Computer and Information Technology (ICCIT)}, IEEE, pp.~850--854, 2022. \cvlink{https://doi.org/10.1109/ICCIT57492.2022.10056062}{doi:10.1109/ICCIT57492.2022.10056062}
+\end{pubs}
+
+%=============================================================
+\section{Research Funding}
+\begin{cvblock}
+\cvline{Louisiana Board of Regents}{\$73,926}
+\begin{itemize}
+  \item ``Pulse-to-Circuit Security: Characterizing and Mitigating Crosstalk Attacks in Multi-Tenant Superconducting Quantum Hardware.'' PI: Dr.~Tasnuva Farheen. Proposal no.~033A-26. My doctoral research is funded by this award.
+\end{itemize}
+\cvline{National Science Foundation (EAGER)}{\$194,596}
+\begin{itemize}
+  \item Adaptive quantum error correction combined with pair-preserving purification for reliable quantum communication networks. PI: Dr.~Tasnuva Farheen. Award no.~2608182. Conceived the research direction and wrote the proposal's research aims, questions, and methodology; currently carrying out the funded research.
+\end{itemize}
+
+%=============================================================
+\end{cvblock}
+
+\section{Honors and Awards}
+\begin{cvblock}
+\begin{itemize}
+  \item \textbf{Quantum Rising Star Award}, Inaugural Quantum Student Success Summit, Rice University \hfill 2026
+  \item Inducted member, The Honor Society of Phi Kappa Phi \hfill 2026
+  \item \textbf{NSF Student Travel Grant} (\$1,250) to present two first-author papers at IEEE QCE \hfill 2025
+  \item First Place, University-Level Math Olympiad, Bangladesh Mathematical Society \hfill 2021
+  \item University Admission Test Scholarship, BUET; ranked 47th of $\sim$10,000 candidates in Bangladesh's most competitive engineering admission test \hfill 2017
+\end{itemize}
+
+%=============================================================
+\end{cvblock}
+
+\section{Professional Service}
+\begin{cvblock}
+\begin{itemize}
+  \item Reviewer, \textit{IEEE Transactions on Quantum Engineering} \hfill 2026
+  \item Sub-reviewer, Design, Automation and Test in Europe (DATE) \hfill 2027
+  \item Sub-reviewer, IEEE Dallas Circuits and Systems Conference (DCAS) \hfill 2026
+\end{itemize}
+\end{cvblock}
+
+\section{Professional Memberships}
+\begin{cvblock}
+\begin{itemize}
+  \item Graduate Student Member, IEEE \hfill 2024 -- Present
+  \item Graduate Student Member, ACM \hfill 2024 -- Present
+\end{itemize}
+
+%=============================================================
+\end{cvblock}
+
+\section{Talks and Presentations}
+\begin{cvblock}
+\begin{itemize}
+  \item Lightning talk: crosstalk vulnerabilities in multi-tenant quantum processors, Quantum Student Success Summit, Rice University, Houston, TX \hfill 2026
+  \item ``Pulse-to-Circuit Characterization of Stealthy Crosstalk Attack on Multi-Tenant Superconducting Quantum Hardware,'' ACM Quantum Security and Privacy Workshop (QSec '25), co-located with ACM CCS \hfill 2025
+  \item Two first-author presentations [C4, C6], IEEE Quantum Week (QCE) \hfill 2025
+  \item Presenter, Q-Net Symposium, LSU APS Chapter, Baton Rouge, LA \hfill 2025
+  \item Instructor, 3\textsuperscript{rd} PSI-Tensor Winter School for Theoretical Physics \hfill 2024
+  \item Keynote, ``Quantum Computing \& Mechanics: Technical Prospects \& Opportunities in Higher Studies,'' IEEE NSU Student Branch, Dhaka \hfill 2022
+\end{itemize}
+\end{cvblock}
+
+%=============================================================
+\section{Teaching Experience}
+
+\begin{cvblock}
+\cventry{Graduate Teaching Assistant}{August 2025 -- Present}
+        {Louisiana State University}{Baton Rouge, LA}
+\begin{itemize}
+  \item CSC 4501, Computer Networks: support instructional activities, grade assignments, and give feedback to students.
+\end{itemize}
+\end{cvblock}
+
+\begin{cvblock}
+\cventry{Teaching Assistant}{June 2023 -- December 2024}
+        {BRAC University}{Dhaka, Bangladesh}
+\begin{itemize}
+  \item CSE 482, Quantum Computing II: conducted tutorials and problem-solving sessions.
+  \item MAT 120, Calculus: conducted lab sessions on numerical methods and scientific Python libraries.
+\end{itemize}
+\end{cvblock}
+
+\subsection{Teaching Materials}
+\begin{itemize}
+  \item \textbf{Interactive Quantum Protocol Simulations and Curriculum} \,(\cvlink{https://github.com/syedshubha/TeachingQuantumComputing}{GitHub}): modules progressing from basic circuit design to density-matrix formalism, with end-to-end simulations and security analysis of BB84, B92, and E91.
+  \item Organized a nationwide online course on quantum mechanics and quantum computing (Bangladesh).
+\end{itemize}
+
+%=============================================================
+\section{Mentoring}
+\begin{itemize}
+  \item Mentored junior undergraduate researchers at North South University (2022--2024); formulated and directed projects that led to two co-supervised journal articles [J2, J3] and an IEEE conference paper on surface-code decoding [C3].
+  \item \textbf{Five of my former mentees are now Ph.D.\ students in quantum information} at institutions worldwide.
+\end{itemize}
+
+%=============================================================
+\section{Media Coverage and Recognition}
+\begin{cvblock}
+\begin{itemize}
+  \item Research featured by industry outlet \textit{Quantum Zeitgeist}:
+        \cvlink{https://quantumzeitgeist.com/quantum-pulse-circuit-mapping-reveals-stealthy-crosstalk-attack-three/}{QSec '25 paper [C5]};
+        \cvlink{https://quantumzeitgeist.com/enhanced-security-efficient-qubit-entangled-state-teleportation-achieves-partially/}{AVS Quantum Science article [J4]}.
+  \item Research contributions at IEEE Quantum Week 2025 highlighted by the LSU Division of Computer Science \& Engineering
+        (\cvlink{https://www.linkedin.com/posts/lsu-division-of-computer-science-engineering_lsu-quantumcomputing-researchexcellence-activity-7364405533233065984-xWiW}{link}).
+  \item Acknowledged in articles published in
+        \cvlink{https://pubs.aip.org/avs/aqs/article-abstract/8/1/013805/3380947/PCA-based-post-processing-in-quantum-process}{\textit{AVS Quantum Science}} and
+        \cvlink{https://advanced.onlinelibrary.wiley.com/doi/10.1002/qute.70484}{\textit{Advanced Quantum Technologies}}.
+\end{itemize}
+
+%=============================================================
+\end{cvblock}
+
+\section{Selected Research Projects and Software}
+\begin{itemize}
+  \item \textbf{Superconducting Qubit Simulation and Hardware Modeling} \,(\cvlink{https://github.com/syedshubha/EmulateQPU-4Q}{GitHub}).
+        Developed a Python pulse-level simulator for four superconducting qubits and three tunable couplers. Used Gmsh and Palace to measure how mesh refinement changes predicted capacitances and charging energies, and published the \cvlink{https://github.com/syedshubha/EmulateQPU-4Q/tree/main/reproducibility/mesh-ladder}{three-mesh comparison}.
+  \item \textbf{Interactive Quantum Singular Value Transformation Laboratory} \,(\cvlink{https://syedshubha.com/qsvt/}{web demo}). Built a browser tool for exploring unitary block encoding, quantum signal processing, and polynomial transformations of singular values.
+  \item \textbf{Neural Shadows: ML for Entanglement Classification} \,(\cvlink{https://github.com/syedshubha/ShadowTomography}{GitHub}).
+        Classified entanglement phases of Werner states with an ML pipeline built on sparse classical-shadow representations; quantified SVM and FNN robustness to finite-shot noise via Monte Carlo stability analysis.
+  \item \textbf{W-State Preparation on Superconducting Qubits with Qiskit Pulse} \,(\cvlink{https://github.com/syedshubha/Phy4750Sh}{GitHub}).
+        Designed gate and measurement pulses from \textit{ibm\_sherbrooke} calibration data; calibrated $\pi$-pulses via Rabi experiments and implemented echoed cross-resonance to mitigate crosstalk in noisy simulation.
+  \item \textbf{Quantum Image Encoding and Decoding} \,(\cvlink{https://github.com/syedshubha/QuantumImageProcessing/blob/main/NEQR_FRQI.ipynb}{GitHub}).
+        Implemented FRQI and NEQR encodings in Qiskit, generalized both encoding circuits, and developed a decoding method to reconstruct output images.
+  \item \textbf{Load Flow Analysis for $n$-Bus Power Systems} \,(\cvlink{https://github.com/syedshubha/load_flow_analysis_gauss_seidel}{GitHub}).
+        Generalized Gauss--Seidel solver with user-defined convergence tolerance.
+\end{itemize}
+
+%=============================================================
+\section{Technical Skills}
+\begin{cvblock}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+  \textbf{Programming:}         & Python, MATLAB, C, C++, Rust, Assembly, OpenQASM \\
+  \textbf{Quantum software:}    & Qiskit (incl.\ Qiskit Pulse), QuTiP, Amazon Braket \\
+  \textbf{Methods:}             & Pulse-level Hamiltonian simulation, process tomography and Pauli transfer matrices, Choi-matrix analysis, classical shadows, stabilizer formalism \\
+  \textbf{Simulation \& EDA:}   & PSpice, Proteus, Quartus, Simulink \\
+  \textbf{Tools:}               & \LaTeX, Git \\
+\end{tabularx}
+
+%=============================================================
+\end{cvblock}
+
+\section{Schools and Workshops Attended}
+\begin{cvblock}
+\begin{itemize}
+  \item IUB Quantum Summer School, Independent University, Bangladesh \hfill 2024
+  \item Tensor PSI Winter School for Theoretical Physics \hfill 2023
+  \item Qiskit Global Quantum Summer School, The Coding School \hfill 2021
+\end{itemize}
+\end{cvblock}
+
+\section{Outreach and Leadership}
+\begin{cvblock}
+\begin{itemize}
+  \item Led a hands-on advanced Qiskit lab at Qiskit Fall Fest, Louisiana State University.
+  \item Wrote blogs and articles for science outreach on quantum computing.
+  \item Volunteered in PPE distribution during the COVID-19 emergency and in winter-clothing distribution in remote villages in Bangladesh.
+\end{itemize}
+\end{cvblock}
+
+%=============================================================
+\section{References}
+\begin{cvblock}
+\small
+\begin{minipage}[t]{0.32\textwidth}\raggedright
+  \textbf{Dr.~Tasnuva Farheen}\\
+  \textit{Ph.D.\ Advisor and PI}\\
+  Assistant Professor\\
+  Division of Computer Science\\
+  Louisiana State University\\
+  Baton Rouge, LA, USA\\
+  \cvlink{mailto:tfarheen@lsu.edu}{tfarheen@lsu.edu}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\textwidth}\raggedright
+  \textbf{Dr.~Mahdy Rahman Chowdhury}\\
+  \textit{Research Supervisor, NSU}\\
+  Professor, Department of ECE\\
+  Founding Director, NSU Center of Quantum Computing\\
+  North South University, Dhaka\\
+  \cvlink{mailto:mahdy.chowdhury@northsouth.edu}{mahdy.chowdhury@northsouth.edu}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\textwidth}\raggedright
+  \textbf{Dr.~Md.~Saifur Rahman}\\
+  \textit{Undergraduate Thesis Supervisor}\\
+  Professor\\
+  Department of EEE\\
+  BUET, Dhaka\\
+  \cvlink{mailto:saifur@eee.buet.ac.bd}{saifur@eee.buet.ac.bd}
+\end{minipage}
+\end{cvblock}
+
+\end{document}
