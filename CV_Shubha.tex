@@ -18,6 +18,9 @@
 \usepackage{tabularx}
 \usepackage{amsmath}
 \usepackage[english]{babel}
+% Keep words intact at line breaks, including compounds in official titles.
+\addto\extrasenglish{\hyphenpenalty=10000\relax\exhyphenpenalty=10000\relax}
+\emergencystretch=2em
 \input{glyphtounicode}
 \pdfgentounicode=1
 
@@ -101,8 +104,8 @@
 \section{Research Interests}
 My doctoral research, which I conceived and proposed, spans two complementary directions:
 \begin{itemize}
-  \item \textbf{Quantum hardware security.} Security of multi-tenant superconducting quantum processors: pulse-level characterization of crosstalk as an attack channel, detection that separates malicious interference from benign calibration drift, and cross-layer verification of compiled quantum workloads.
-  \item \textbf{Quantum communication and quantum correlations.} Exploiting quantum correlations to design adaptive error-correction and purification protocols, and high-fidelity multi-qubit state transmission over partially entangled GHZ channels with optimal POVMs, toward quantum repeaters and the quantum internet.
+  \item \textbf{Quantum hardware security.} Characterizing crosstalk at the pulse level on shared superconducting processors, distinguishing interference from calibration drift, and verifying compiled quantum workloads across hardware and circuit layers.
+  \item \textbf{Quantum communication and quantum correlations.} Designing adaptive protocols for error correction and purification, and using optimal POVMs to transmit states of multiple qubits over partially entangled GHZ channels. Applications include quantum repeaters and the quantum internet.
 \end{itemize}
 Related interests include quantum cryptography, quantum error correction, quantum algorithms, and machine learning for quantum characterization.
 
@@ -111,10 +114,10 @@ Related interests include quantum cryptography, quantum error correction, quantu
 
 \begin{cvblock}
 \cventry{Louisiana State University, Baton Rouge, LA, USA}{January 2025 -- Present}
-        {Ph.D. in Computer Science, Division of Computer Science}{GPA: 3.988/4.00}
+        {Ph.D. in Computer Science, Division of Computer Science}{GPA: 4.0/4.0}
 \begin{itemize}
   \item Advisor: Dr.~Tasnuva Farheen, Assistant Professor, Division of Computer Science (\cvlink{mailto:tfarheen@lsu.edu}{tfarheen@lsu.edu})
-  \item Selected coursework: Quantum Technology (A+), Quantum Algorithms (A+), Machine Learning (A+), Advanced Algorithm Design
+  \item Selected coursework: Quantum Technology (A+), Quantum Algorithms (A+), Machine Learning (A+)
 \end{itemize}
 \end{cvblock}
 
@@ -133,10 +136,10 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \cventry{Graduate Research Assistant}{January 2025 -- Present}
         {Division of Computer Science, Louisiana State University}{Baton Rouge, LA}
 \begin{itemize}
-  \item Quantum hardware security direction: characterized crosstalk as an active attack vector on shared superconducting hardware through pulse-level simulation [C4], then developed a pulse-to-circuit characterization framework that identified a novel asymmetric attack mechanism [C5].
-  \item Developed a structural detection framework that separates coherent crosstalk from calibration drift using Pauli-transfer-matrix signatures, built around an exact structural zero that cleanly separates drift from attack signatures [C7].
+  \item Characterized crosstalk as an attack vector on shared superconducting hardware through simulation at the pulse level [C4]. Built a framework linking pulse dynamics to circuit behavior and used it to identify an asymmetric attack mechanism [C5].
+  \item Developed a framework that distinguishes coherent crosstalk from calibration drift using an exact structural zero in the Pauli transfer matrix signature of drift [C7].
   \item Compared simulated operations under isolated and concurrent execution to study interference on shared quantum hardware.
-  \item Designed a correlation-guided adaptive purification protocol for networked superdense coding [C6] and continue this research under the NSF award. Examined how correlations between qubits change as noise degrades a communication link. As corresponding author, led collaborative work on $n$-qubit state teleportation over partially entangled GHZ channels with optimal POVM measurement [J4].
+  \item Designed an adaptive purification protocol that uses quantum correlations to guide superdense coding [C6]. Continued this work under the NSF award by examining how noise changes correlations between qubits. As corresponding author, led a study of teleportation for states of $n$ qubits over partially entangled GHZ channels with optimal POVMs [J4].
 \end{itemize}
 \end{cvblock}
 
@@ -146,8 +149,8 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \begin{itemize}
   \item Pioneered Bangladesh's first research initiative in quantum computing and quantum communication, under the supervision of Dr.~Mahdy Rahman Chowdhury.
   \item Helped build the NSU Center of Quantum Computing (NCQC), Bangladesh's first dedicated quantum research center.
-  \item Extended undergraduate thesis work into a first-author journal article proposing a stabilizer-formalism error-correction protocol that improves Bell-pair fidelity under Pauli noise for short- and long-distance communication [J1].
-  \item Co-supervised student researchers with Dr.~Chowdhury; formulated and directed research projects, resulting in work on ensemble decoders for surface codes [C3] and on integrating quantum key distribution with classical security [J2, J3].
+  \item Published a journal article as first author, extending my undergraduate thesis. The article proposes an error correction protocol based on stabilizers to improve the fidelity of Bell pairs under Pauli noise at short and long distances [J1].
+  \item Supervised student researchers with Dr.~Chowdhury. Developed projects on ensemble decoders for surface codes [C3] and on combining quantum key distribution with classical security [J2, J3].
 \end{itemize}
 \end{cvblock}
 
@@ -155,14 +158,14 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \cventry{Undergraduate Researcher}{2021 -- 2022}
         {Department of Electrical and Electronic Engineering, BUET}{Dhaka, Bangladesh}
 \begin{itemize}
-  \item Undergraduate thesis on quantum communication under Dr.~Md.~Saifur Rahman: fidelity of Bell states protected by quantum repetition codes in bit-flip channels [C2].
-  \item Studied the effect of EOG artifact removal on deep-learning classification of motor-imagery EEG signals for brain--computer interfaces [C1].
+  \item Studied the fidelity of Bell states protected by quantum repetition codes in channels with bit flips for my undergraduate thesis with Dr.~Md.~Saifur Rahman [C2].
+  \item Studied how removing EOG artifacts affects classification of EEG signals from motor imagery using deep learning [C1].
 \end{itemize}
 \end{cvblock}
 
 %=============================================================
 \section{Publications}
-{\small \me\ denotes the author. $^{*}$Corresponding author. $^{\dagger}$Student project co-supervised by the author.}
+{\small \me\ denotes the author. $^{*}$Corresponding author. $^{\dagger}$Student project under joint supervision.}
 
 \subsection{Journal Articles}
 \begin{pubs}[label={[J\arabic*]}]
@@ -172,7 +175,7 @@ Related interests include quantum cryptography, quantum error correction, quantu
   \item[{[J1]}] \me, M.\,S.~Rahman, and M.\,R.\,C.~Mahdy, ``Significant Improvement of Fidelity for Encoded Quantum Bell Pairs at Long and Short-Distance Communication along with Generalized Circuit,'' \textit{Heliyon}, vol.~9, no.~9, p.~e19700, 2023. \cvlink{https://doi.org/10.1016/j.heliyon.2023.e19700}{doi:10.1016/j.heliyon.2023.e19700}
 \end{pubs}
 
-\subsection{Peer-Reviewed Conference and Workshop Papers}
+\subsection{Conference and Workshop Papers}
 \begin{pubs}[label={[C\arabic*]}]
   \item[{[C7]}] \me\ and T.~Farheen, ``Distinguishing Coherent Crosstalk from Calibration Drift via Pauli-Transfer Signatures and Quantum Edge Detection,'' \textit{IEEE International Symposium on Hardware Oriented Security and Trust (HOST)}, 2027, accepted, to appear. \cvlink{https://host.conferences.computer.org/2027/accepted-papers/}{HOST accepted papers}
   \item[{[C6]}] \me\ and T.~Farheen, ``Testbed Protocol for Adaptive Superdense Coding in Distributed Quantum Networks,'' \textit{IEEE International Conference on Quantum Computing and Engineering (QCE)}, 2025, short paper. \cvlink{https://doi.org/10.1109/QCE65121.2025.10350}{doi:10.1109/QCE65121.2025.10350}
@@ -192,7 +195,7 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \end{itemize}
 \cvline{National Science Foundation (EAGER)}{\$194,596}
 \begin{itemize}
-  \item Adaptive quantum error correction combined with pair-preserving purification for reliable quantum communication networks. PI: Dr.~Tasnuva Farheen. Award no.~2608182. Conceived the research direction and wrote the proposal's research aims, questions, and methodology; currently carrying out the funded research.
+  \item Adaptive quantum error correction combined with purification that preserves entangled pairs for reliable quantum communication networks. PI: Dr.~Tasnuva Farheen. Award no.~2608182. Conceived the research direction, wrote the proposal's aims, questions, and methods, and am carrying out the funded research.
 \end{itemize}
 
 %=============================================================
@@ -203,8 +206,8 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \begin{itemize}
   \item \textbf{Quantum Rising Star Award}, Inaugural Quantum Student Success Summit, Rice University \hfill 2026
   \item Inducted member, The Honor Society of Phi Kappa Phi \hfill 2026
-  \item \textbf{NSF Student Travel Grant} (\$1,250) to present two first-author papers at IEEE QCE \hfill 2025
-  \item First Place, University-Level Math Olympiad, Bangladesh Mathematical Society \hfill 2021
+  \item \textbf{NSF Student Travel Grant} (\$1,250) to present two papers as first author at IEEE QCE \hfill 2025
+  \item First Place, University Math Olympiad, Bangladesh Mathematical Society \hfill 2021
   \item University Admission Test Scholarship, BUET; ranked 47th of $\sim$10,000 candidates in Bangladesh's most competitive engineering admission test \hfill 2017
 \end{itemize}
 
@@ -215,8 +218,8 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \begin{cvblock}
 \begin{itemize}
   \item Reviewer, \textit{IEEE Transactions on Quantum Engineering} \hfill 2026
-  \item Sub-reviewer, Design, Automation and Test in Europe (DATE) \hfill 2027
-  \item Sub-reviewer, IEEE Dallas Circuits and Systems Conference (DCAS) \hfill 2026
+  \item Subreviewer, Design, Automation and Test in Europe (DATE) \hfill 2027
+  \item Subreviewer, IEEE Dallas Circuits and Systems Conference (DCAS) \hfill 2026
 \end{itemize}
 \end{cvblock}
 
@@ -233,9 +236,9 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \section{Talks and Presentations}
 \begin{cvblock}
 \begin{itemize}
-  \item Lightning talk: crosstalk vulnerabilities in multi-tenant quantum processors, Quantum Student Success Summit, Rice University, Houston, TX \hfill 2026
-  \item ``Pulse-to-Circuit Characterization of Stealthy Crosstalk Attack on Multi-Tenant Superconducting Quantum Hardware,'' ACM Quantum Security and Privacy Workshop (QSec '25), co-located with ACM CCS \hfill 2025
-  \item Two first-author presentations [C4, C6], IEEE Quantum Week (QCE) \hfill 2025
+  \item Lightning talk on crosstalk vulnerabilities in shared quantum processors, Quantum Student Success Summit, Rice University, Houston, TX \hfill 2026
+  \item Presented the crosstalk characterization paper [C5], ACM QSec at ACM CCS \hfill 2025
+  \item Presented two papers as first author [C4, C6], IEEE Quantum Week (QCE) \hfill 2025
   \item Presenter, Q-Net Symposium, LSU APS Chapter, Baton Rouge, LA \hfill 2025
   \item Instructor, 3\textsuperscript{rd} PSI-Tensor Winter School for Theoretical Physics \hfill 2024
   \item Keynote, ``Quantum Computing \& Mechanics: Technical Prospects \& Opportunities in Higher Studies,'' IEEE NSU Student Branch, Dhaka \hfill 2022
@@ -257,7 +260,7 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \cventry{Teaching Assistant}{June 2023 -- December 2024}
         {BRAC University}{Dhaka, Bangladesh}
 \begin{itemize}
-  \item CSE 482, Quantum Computing II: conducted tutorials and problem-solving sessions.
+  \item Conducted tutorials and guided students through problems in CSE 482, Quantum Computing II.
   \item MAT 120, Calculus: conducted lab sessions on numerical methods and scientific Python libraries.
 \end{itemize}
 \end{cvblock}
@@ -271,7 +274,7 @@ Related interests include quantum cryptography, quantum error correction, quantu
 %=============================================================
 \section{Mentoring}
 \begin{itemize}
-  \item Mentored junior undergraduate researchers at North South University (2022--2024); formulated and directed projects that led to two co-supervised journal articles [J2, J3] and an IEEE conference paper on surface-code decoding [C3].
+  \item Mentored junior undergraduate researchers at North South University (2022--2024). Formulated and directed projects that led to two journal articles [J2, J3] and an IEEE conference paper on decoding surface codes [C3].
   \item \textbf{Five of my former mentees are now Ph.D.\ students in quantum information} at institutions worldwide.
 \end{itemize}
 
@@ -295,16 +298,16 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \section{Selected Research Projects and Software}
 \begin{itemize}
   \item \textbf{Superconducting Qubit Simulation and Hardware Modeling} \,(\cvlink{https://github.com/syedshubha/EmulateQPU-4Q}{GitHub}).
-        Developed a Python pulse-level simulator for four superconducting qubits and three tunable couplers. Used Gmsh and Palace to measure how mesh refinement changes predicted capacitances and charging energies, and published the \cvlink{https://github.com/syedshubha/EmulateQPU-4Q/tree/main/reproducibility/mesh-ladder}{three-mesh comparison}.
-  \item \textbf{Interactive Quantum Singular Value Transformation Laboratory} \,(\cvlink{https://syedshubha.com/qsvt/}{web demo}). Built a browser tool for exploring unitary block encoding, quantum signal processing, and polynomial transformations of singular values.
+        Built a Python simulator for four transmons and three tunable couplers with programmable microwave and flux controls. Designed layouts with shared and dedicated readout feedlines, Purcell filters, and a carrier with wire bonds. Generated Gmsh meshes and Palace field inputs and published a \cvlink{https://github.com/syedshubha/EmulateQPU-4Q/tree/main/reproducibility/mesh-ladder}{comparison across three meshes} for capacitance and charging energy. Added regression tests for sampled controls. On one Slurm node, five circuit tasks matched serial results exactly and an interrupted worker recovered on retry.
+  \item \textbf{Interactive Quantum Singular Value Transformation Laboratory} \,(\cvlink{https://syedshubha.com/qsvt/}{web demo}). Built a browser tool that constructs unitary block encodings of rectangular matrices, fits phases for quantum signal processing, and checks polynomial responses against independent numerical samples.
   \item \textbf{Neural Shadows: ML for Entanglement Classification} \,(\cvlink{https://github.com/syedshubha/ShadowTomography}{GitHub}).
-        Classified entanglement phases of Werner states with an ML pipeline built on sparse classical-shadow representations; quantified SVM and FNN robustness to finite-shot noise via Monte Carlo stability analysis.
+        Classified entanglement phases of Werner states from sparse classical shadows. Used Monte Carlo trials to quantify how measurement sample size affects SVM and FNN performance.
   \item \textbf{W-State Preparation on Superconducting Qubits with Qiskit Pulse} \,(\cvlink{https://github.com/syedshubha/Phy4750Sh}{GitHub}).
-        Designed gate and measurement pulses from \textit{ibm\_sherbrooke} calibration data; calibrated $\pi$-pulses via Rabi experiments and implemented echoed cross-resonance to mitigate crosstalk in noisy simulation.
+        Designed gate and measurement pulses from \textit{ibm\_sherbrooke} calibration data. Calibrated $\pi$ pulses using Rabi experiments and simulated echoed cross resonance to mitigate crosstalk.
   \item \textbf{Quantum Image Encoding and Decoding} \,(\cvlink{https://github.com/syedshubha/QuantumImageProcessing/blob/main/NEQR_FRQI.ipynb}{GitHub}).
         Implemented FRQI and NEQR encodings in Qiskit, generalized both encoding circuits, and developed a decoding method to reconstruct output images.
   \item \textbf{Load Flow Analysis for $n$-Bus Power Systems} \,(\cvlink{https://github.com/syedshubha/load_flow_analysis_gauss_seidel}{GitHub}).
-        Generalized Gauss--Seidel solver with user-defined convergence tolerance.
+        Generalized a Gauss--Seidel solver with an adjustable convergence tolerance.
 \end{itemize}
 
 %=============================================================
@@ -313,9 +316,9 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \begin{tabularx}{\textwidth}{@{}l X@{}}
   \textbf{Programming:}         & Python, MATLAB, C, C++, Rust, Assembly, OpenQASM \\
   \textbf{Quantum software:}    & Qiskit (incl.\ Qiskit Pulse), QuTiP, Amazon Braket \\
-  \textbf{Methods:}             & Pulse-level Hamiltonian simulation, process tomography and Pauli transfer matrices, Choi-matrix analysis, classical shadows, stabilizer formalism \\
-  \textbf{Simulation \& EDA:}   & PSpice, Proteus, Quartus, Simulink \\
-  \textbf{Tools:}               & \LaTeX, Git \\
+  \textbf{Methods:}             & Hamiltonian simulation of control pulses, process tomography, Pauli transfer and Choi matrices, classical shadows, stabilizer formalism \\
+  \textbf{Simulation \& EDA:}   & Gmsh, Palace, PSpice, Proteus, Quartus, Simulink \\
+  \textbf{Tools:}               & \LaTeX, Git, Slurm \\
 \end{tabularx}
 
 %=============================================================
@@ -333,9 +336,9 @@ Related interests include quantum cryptography, quantum error correction, quantu
 \section{Outreach and Leadership}
 \begin{cvblock}
 \begin{itemize}
-  \item Led a hands-on advanced Qiskit lab at Qiskit Fall Fest, Louisiana State University.
+  \item Led an advanced Qiskit lab at Qiskit Fall Fest, Louisiana State University.
   \item Wrote blogs and articles for science outreach on quantum computing.
-  \item Volunteered in PPE distribution during the COVID-19 emergency and in winter-clothing distribution in remote villages in Bangladesh.
+  \item Volunteered to distribute PPE during the COVID-19 emergency and winter clothing in remote villages in Bangladesh.
 \end{itemize}
 \end{cvblock}
 

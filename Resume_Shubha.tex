@@ -16,6 +16,9 @@
 \usepackage{tabularx}
 \usepackage{amsmath}
 \usepackage[english]{babel}
+% Keep prose words intact, also in justified tabular columns.
+\addto\extrasenglish{\hyphenpenalty=10000\relax\exhyphenpenalty=10000\relax}
+\setlength{\emergencystretch}{1em}
 \input{glyphtounicode}
 \pdfgentounicode=1
 
@@ -58,7 +61,7 @@
 
 %---------- Summary ----------
 \section{Summary}
-Ph.D. student in Computer Science working on \textbf{quantum hardware security} and \textbf{quantum communication}. Builds pulse-level and circuit-level simulation and verification tools for superconducting quantum processors. First-author papers at ACM QSec 2025 and IEEE QCE 2025 (two papers). First-author crosstalk detection paper accepted for \textbf{IEEE HOST 2027} (to appear). Four journal articles (\cvlink{https://syedshubha.com/\#publications}{full publication list}). \textbf{Quantum Rising Star Award} (Rice University, 2026).
+Ph.D. student in Computer Science working on \textbf{quantum hardware security} and \textbf{quantum communication}. Builds tools to simulate and verify superconducting processors at the pulse and circuit levels. First author of one ACM QSec 2025 paper, two IEEE QCE 2025 papers, and a paper on crosstalk detection accepted for \textbf{IEEE HOST 2027} (to appear). Four journal articles (\cvlink{https://syedshubha.com/\#publications}{full publication list}). \textbf{Quantum Rising Star Award} (Rice University, 2026).
 
 %---------- Education ----------
 \section{Education}
@@ -77,44 +80,45 @@ Ph.D. student in Computer Science working on \textbf{quantum hardware security} 
       {Quantum hardware security and quantum communication (directions I proposed)}{Baton Rouge, LA}
 \vspace{-2pt}
 \begin{itemize}
-  \item Modeled crosstalk between co-located users on shared superconducting hardware with pulse-level simulation, and built a pulse-to-circuit framework that identified a new asymmetric attack mechanism (IEEE QCE '25; ACM QSec '25).
-  \item Designed a detector that separates malicious crosstalk from benign calibration drift using Pauli-transfer-matrix signatures, built on an exact structural zero in the drift signature (IEEE HOST '27).
-  \item Compared simulated operations under isolated and concurrent execution to study interference on shared quantum hardware.
-  \item Designed an adaptive purification protocol for networked superdense coding (IEEE QCE '25) and studied how noise affects correlations between qubits.
-  \item Conceived and wrote the research aims and methodology of an awarded NSF proposal (\$194,596) on adaptive error correction and purification for quantum networks, and now carry out its research; hardware-security work funded by a Louisiana Board of Regents award (\$73,926).
+  \item Traced crosstalk from microwave pulses to circuit outcomes on shared superconducting hardware and identified an asymmetric interference mechanism (IEEE QCE '25 and ACM QSec '25).
+  \item Designed a detector for crosstalk using Pauli transfer matrix entries that vanish under calibration drift (IEEE HOST '27).
+  \item Compared isolated and concurrent workloads in simulation to measure interference on shared hardware.
+  \item Designed an adaptive purification protocol for superdense coding (IEEE QCE '25). Studied how noise alters qubit correlations.
+  \item Led a study of teleportation over partially entangled multiqubit channels as corresponding author (\textit{AVS Quantum Science}).
+  \item Wrote the aims and methods for a funded NSF proposal (\$194,596) on adaptive quantum error correction and purification. Conduct research under this grant and a Louisiana Board of Regents hardware security award (\$73,926).
 \end{itemize}
 \vspace{2pt}
 \entry{Research Assistant, North South University}{June 2022 -- May 2024}
       {Supervisor: Dr.~Mahdy Rahman Chowdhury}{Dhaka, Bangladesh}
 \vspace{-2pt}
 \begin{itemize}
-  \item Pioneered Bangladesh's first research initiative in quantum computing and communication; helped build the NSU Center of Quantum Computing.
-  \item Proposed a stabilizer-formalism error-correction protocol that improves Bell-pair fidelity under Pauli noise (first author, \textit{Heliyon}).
-  \item Led student research projects (surface-code decoders, QKD-based security) that produced 3 papers; 5 former mentees are now Ph.D. students in quantum information.
+  \item Helped establish the NSU Center of Quantum Computing, Bangladesh's first research center in this field.
+  \item Developed a quantum error correction protocol using stabilizer codes to improve the fidelity of Bell pairs under Pauli noise (first author, \textit{Heliyon}).
+  \item Led student projects on surface code decoders and quantum key distribution that produced three papers. Five former mentees now pursue Ph.D.s in quantum information.
 \end{itemize}
 
 %---------- Projects ----------
 \section{Projects}
 \begin{itemize}
-  \item \textbf{Superconducting Qubit Simulation and Hardware Modeling} (\cvlink{https://github.com/syedshubha/EmulateQPU-4Q}{GitHub}). Built a Python pulse simulator for four qubits and three tunable couplers. Compared capacitances and charging energies across three Gmsh meshes with Palace.
-  \item \textbf{W-State Preparation with Qiskit Pulse} (\cvlink{https://github.com/syedshubha/Phy4750Sh}{GitHub}): designed gate and measurement pulses from \textit{ibm\_sherbrooke} calibration data; Rabi $\pi$-pulse calibration and echoed cross-resonance to suppress crosstalk.
-  \item \textbf{\cvlink{https://syedshubha.com/qsvt/}{Interactive QSVT Laboratory}}. Built a browser tool for exploring block encoding and quantum signal processing.
-  \item \textbf{Neural Shadows} (\cvlink{https://github.com/syedshubha/ShadowTomography}{GitHub}): ML classification of Werner-state entanglement from sparse classical shadows; Monte Carlo robustness analysis of SVM and FNN models under finite-shot noise.
+  \item \textbf{Superconducting Qubit Simulation and Hardware Modeling} (\cvlink{https://github.com/syedshubha/EmulateQPU-4Q}{GitHub}). Built a simulator for four transmons and three tunable couplers. Designed shared and dedicated readout layouts and used Gmsh and Palace to study capacitance and charging energy under mesh refinement. Fixed a solver error that skipped narrow sampled pulses. Verified that five Slurm tasks matched serial results on one node. Checked spectra against scqubits and pulse dynamics against QuTiP.
+  \item \textbf{W-State Preparation with Qiskit Pulse} (\cvlink{https://github.com/syedshubha/Phy4750Sh}{GitHub}). Used \textit{ibm\_sherbrooke} data to design gate and measurement pulses, calibrate $\pi$ pulses with Rabi experiments, and suppress crosstalk with echoed cross resonance in simulation.
+  \item \textbf{\cvlink{https://syedshubha.com/qsvt/}{Interactive QSVT Laboratory}}. Built a browser lab where users enter a matrix, inspect its unitary block encoding, and apply a chosen polynomial to its singular values.
+  \item \textbf{Neural Shadows} (\cvlink{https://github.com/syedshubha/ShadowTomography}{GitHub}). Classified entanglement in Werner states from sparse classical shadows. Tested classifier robustness to finite measurement counts with Monte Carlo simulations of SVM and FNN models.
 \end{itemize}
 
 %---------- Skills ----------
 \section{Skills}
 \begin{tabularx}{\textwidth}{@{}l X@{}}
   \textbf{Languages \& tools:} & Python, C, C++, Rust, MATLAB, OpenQASM, Git, \LaTeX \\
-  \textbf{Quantum tools:} & Qiskit (incl.\ Qiskit Pulse), QuTiP, Amazon Braket \\
-  \textbf{Methods:} & Pulse-level Hamiltonian simulation, process tomography / Pauli transfer matrices, Choi-matrix \mbox{analysis}, classical shadows, stabilizer codes, QKD protocol analysis. \\
+  \textbf{Simulation tools:} & Qiskit (incl.\ Qiskit Pulse), QuTiP, Amazon Braket, Gmsh, Palace, Slurm \\
+  \textbf{Methods:} & Hamiltonian simulation of control pulses, process tomography, Pauli transfer matrices, Choi matrix analysis, classical shadows, stabilizer codes, QKD protocol analysis. \\
 \end{tabularx}
 
 %---------- Honors & Service ----------
 \section{Honors, Service, and Teaching}
 \begin{itemize}
   \item Quantum Rising Star Award, Quantum Student Success Summit, Rice University (2026); NSF Student Travel Grant, IEEE QCE (2025); Phi Kappa Phi (2026).
-  \item Reviewer, \textit{IEEE Transactions on Quantum Engineering} (2026). Sub-reviewer, DATE 2027 and IEEE DCAS 2026. Graduate TA, CSC 4501 Computer Networks, LSU (2025--present); TA, Quantum Computing II, BRAC University (2023--2024).
+  \item Reviewer, \textit{IEEE Transactions on Quantum Engineering} (2026). Subreviewer for DATE 2027 and IEEE DCAS 2026. Graduate TA, CSC 4501 Computer Networks, LSU (2025--present); TA, Quantum Computing II, BRAC University (2023--2024).
 \end{itemize}
 
 \end{document}
