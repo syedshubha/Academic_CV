@@ -55,7 +55,7 @@
   \cvlink{https://github.com/syedshubha}{github.com/syedshubha} \;$|$\;
   \cvlink{https://scholar.google.com/citations?user=8EK8VJMAAAAJ}{Google Scholar}   \\[1pt] %\cvlink{https://orcid.org/0009-0005-1435-5958}{ORCID}  \\[1pt]
 
-  Citizenship: Bangladesh \;$|$\; US Visa Status: F-1 Student
+  Baton Rouge, LA
 \end{center}
 \vspace{-4pt}
 
@@ -65,7 +65,7 @@ Ph.D. student in Computer Science working on \textbf{quantum hardware security} 
 
 %---------- Education ----------
 \section{Education}
-\entry{Louisiana State University}{January 2025 -- Present}
+\entry{Louisiana State University}{January 2025 -- Expected May 2029}
       {Ph.D. in Computer Science \;$\cdot$\; Advisor: Dr.~Tasnuva Farheen}{GPA: 4.0/4.0}
 \vspace{-2pt}
 \begin{itemize}
@@ -80,10 +80,9 @@ Ph.D. student in Computer Science working on \textbf{quantum hardware security} 
       {Quantum hardware security and quantum communication (directions I proposed)}{Baton Rouge, LA}
 \vspace{-2pt}
 \begin{itemize}
-  \item Traced crosstalk from microwave pulses to circuit outcomes on shared superconducting hardware and identified an asymmetric interference mechanism (IEEE QCE '25 and ACM QSec '25).
-  \item Designed a detector for crosstalk using Pauli transfer matrix entries that vanish under calibration drift (IEEE HOST '27).
-  \item Compared isolated and concurrent workloads in simulation to measure interference on shared hardware.
-  \item Designed an adaptive purification protocol for superdense coding (IEEE QCE '25). Studied how different noise signatures alters non-classical correlations and available resources, which fidelity alone can miss.
+  \item Built a pulse-to-circuit pipeline (process tomography, Kraus-gauge fitting) that traced crosstalk on shared superconducting hardware to an asymmetric driver--catalyst mechanism. Showed that attacker-first scheduling drops a quantum neural network's accuracy to 0.5 (chance); proposed a canary-plus-reset defense (IEEE QCE '25, ACM QSec '25).
+  \item Designed a crosstalk detector using Pauli-transfer-matrix blocks that vanish exactly under local calibration drift. With classical shadows it detects couplings down to $\lambda \approx 0.13$ at a 5\% false-positive rate (IEEE HOST '27).
+  \item Designed an adaptive purification protocol for superdense coding (IEEE QCE '25), and studied how different noise signatures alter non-classical correlations and available resources that fidelity alone can miss.
   \item Led a study of teleportation over partially entangled multiqubit channels as corresponding author (\textit{AVS Quantum Science}).
   \item Wrote the aims and methods for a funded NSF proposal (\$194,596) on adaptive entanglement purification for superdense coding. Conduct research under this grant and a Louisiana Board of Regents hardware security award (\$73,926).
 \end{itemize}
@@ -100,16 +99,16 @@ Ph.D. student in Computer Science working on \textbf{quantum hardware security} 
 \section{Projects}
 \begin{itemize}
   \item \textbf{Superconducting Qubit Simulation and Hardware Modeling} (\cvlink{https://github.com/syedshubha/EmulateQPU-4Q}{GitHub}). Built a simulator for four transmons and three tunable couplers. Designed shared and dedicated readout layouts and used Gmsh and Palace to study capacitance and charging energy under mesh refinement. Fixed a solver error that skipped narrow sampled pulses. Verified that five Slurm tasks matched serial results on one node. Checked spectra against scqubits and pulse dynamics against QuTiP.
-  \item \textbf{W-State Preparation with Qiskit Pulse} (\cvlink{https://github.com/syedshubha/Phy4750Sh}{GitHub}). Used \textit{ibm\_sherbrooke} data to design gate and measurement pulses, calibrate $\pi$ pulses with Rabi experiments, and suppress crosstalk with echoed cross resonance in simulation.
+  \item \textbf{W-State Preparation with Qiskit Pulse} (\cvlink{https://github.com/syedshubha/w-state-qiskit-pulse}{GitHub}). Built single-qubit, echoed cross-resonance, and readout pulses for a three-qubit W state from \textit{ibm\_sherbrooke} data; set $\pi$-pulse amplitudes from simulated Rabi sweeps.
   \item \textbf{\cvlink{https://syedshubha.com/qsvt/}{Interactive QSVT Laboratory}}. Built a browser lab where users enter a matrix, inspect its unitary block encoding, and apply a chosen polynomial to its singular values.
-  \item \textbf{Neural Shadows} (\cvlink{https://github.com/syedshubha/ShadowTomography}{GitHub}). Classified entanglement in Werner states from sparse classical shadows. Tested classifier robustness to finite measurement counts with Monte Carlo simulations of SVM and FNN models.
+  \item \textbf{Neural Shadows} (\cvlink{https://github.com/syedshubha/ShadowTomography}{GitHub}; with J.~Masters). Classified Werner-state entanglement from 25 classical-shadow snapshots per state; benchmarked four classifiers over 100 Monte Carlo trials (mean F1 0.80--0.82).
 \end{itemize}
 
 %---------- Skills ----------
 \section{Skills}
 \begin{tabularx}{\textwidth}{@{}l X@{}}
-  \textbf{Languages \& tools:} & Python, C, C++, Rust, MATLAB, OpenQASM, Git, \LaTeX \\
-  \textbf{Simulation tools:} & Qiskit (incl.\ Qiskit Pulse), QuTiP, Amazon Braket, Gmsh, Palace, Slurm \\
+  \textbf{Languages \& tools:} & Python, C, C++, MATLAB, OpenQASM, Git, \LaTeX \\
+  \textbf{Simulation tools:} & Qiskit (incl.\ Qiskit Pulse), QuTiP, scqubits, Amazon Braket, Gmsh, Palace, Slurm \\
   \textbf{Methods:} & Hamiltonian simulation of control pulses, process tomography, Pauli transfer matrices, Choi matrix analysis, classical shadows, stabilizer codes, QKD protocol analysis. \\
 \end{tabularx}
 
