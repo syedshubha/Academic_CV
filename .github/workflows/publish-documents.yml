@@ -21,10 +21,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Install TeX Live
+      - name: Install TinyTeX
+        shell: bash
         run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends texlive-latex-extra texlive-fonts-recommended
+          archive="$RUNNER_TEMP/tinytex.tar.xz"
+          url="https://github.com/rstudio/tinytex-releases/releases/download/v2026.11/TinyTeX-linux-x86_64-v2026.11.tar.xz"
+          curl --fail --silent --show-error --location --retry 2 --max-time 180 "$url" -o "$archive"
+          printf '%s  %s\n' '50e68059058db770a28bcca44d5a323cb57fc10d470017c858404aafeaac9dd7' "$archive" | sha256sum --check
+          tar -xJf "$archive" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/.TinyTeX/bin/x86_64-linux" >> "$GITHUB_PATH"
       - name: Compile both documents
         shell: bash
         run: |
